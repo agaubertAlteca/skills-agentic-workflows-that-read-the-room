@@ -39,11 +39,13 @@ On each daily or manually dispatched run, propose a small, useful update to
    `site/content/github-info.md`, and any applicable repository instructions.
    Do not use terminal, CLI, or sandboxed commands to read repository guidance
    or reference files.
-2. Use `web-fetch` to fetch https://github.blog/latest/,
-  https://github.blog/changelog/, and the Awesome Copilot workflows at
-  https://awesome-copilot.github.com/workflows/. Use all three as sources for
-  updates. Fetch relevant linked official articles with `web-fetch` when needed
-  to verify details. Read external public guidance only with `web-fetch`.
+2. Use the SDK tool `web_fetch` to fetch https://github.blog/latest/,
+   https://github.blog/changelog/, and the Awesome Copilot workflows at
+   https://awesome-copilot.github.com/workflows/. The YAML setting `web-fetch`
+   enables the SDK tool named `web_fetch`; call `web_fetch` to read web pages.
+   Use all three as sources for updates. Fetch relevant linked official articles
+   with `web_fetch` when needed to verify details. Read external public guidance
+   only with `web_fetch`.
 3. Use GitHub API tools to check for open pull requests with the title prefix
    `[update-github-info]`. If one already proposes an update to this file, call
    `noop` with a brief explanation instead of creating a duplicate.
