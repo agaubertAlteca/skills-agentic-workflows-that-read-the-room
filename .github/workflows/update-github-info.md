@@ -20,6 +20,7 @@ network:
   allowed:
     - github.blog
     - github.com
+    - awesome-copilot.github.com
 safe-outputs:
   create-pull-request:
     title-prefix: "[update-github-info] "
@@ -38,10 +39,11 @@ On each daily or manually dispatched run, propose a small, useful update to
    `site/content/github-info.md`, and any applicable repository instructions.
    Do not use terminal, CLI, or sandboxed commands to read repository guidance
    or reference files.
-2. Use `web-fetch` to fetch both https://github.blog/latest/ and
-   https://github.blog/changelog/. Fetch relevant linked official articles with
-   `web-fetch` when needed to verify details. Read external public guidance only
-   with `web-fetch`.
+2. Use `web-fetch` to fetch https://github.blog/latest/,
+  https://github.blog/changelog/, and the Awesome Copilot workflows at
+  https://awesome-copilot.github.com/workflows/. Use all three as sources for
+  updates. Fetch relevant linked official articles with `web-fetch` when needed
+  to verify details. Read external public guidance only with `web-fetch`.
 3. Use GitHub API tools to check for open pull requests with the title prefix
    `[update-github-info]`. If one already proposes an update to this file, call
    `noop` with a brief explanation instead of creating a duplicate.
