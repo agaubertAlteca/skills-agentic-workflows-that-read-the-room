@@ -64,7 +64,7 @@ or the required sources cannot be fetched, call `noop` with a short reason.
 
 ## Propose the Update
 
-Use the `create-pull-request` safe output to propose the changes. Include a
-concise summary, links to the sources, and a request for Mona's review in the PR
+Create a pull request for Mona to review using the `create-pull-request` safe output.
+Include a concise summary, links to the sources, and a request for Mona's review in the PR
 body. Do not invent a GitHub username for Mona. Never push directly to `main`,
 merge the PR, or publish the changes yourself.
